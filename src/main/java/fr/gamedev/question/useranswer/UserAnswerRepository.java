@@ -1,12 +1,10 @@
-package fr.gamedev.question.repository;
+package fr.gamedev.question.useranswer;
 
-import fr.gamedev.question.data.Question;
-import fr.gamedev.question.data.User;
+import fr.gamedev.question.question.Question;
+import fr.gamedev.question.user.User;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
-
-import fr.gamedev.question.data.UserAnswer;
 
 import java.util.List;
 

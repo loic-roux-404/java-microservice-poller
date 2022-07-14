@@ -1,5 +1,6 @@
-package fr.gamedev.question.data;
+package fr.gamedev.question.user;
 
+import fr.gamedev.question.tag.Tag;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Parameter;
 

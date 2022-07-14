@@ -1,13 +1,13 @@
 package fr.gamedev.question;
 
-import fr.gamedev.question.data.Answer;
-import fr.gamedev.question.data.Question;
-import fr.gamedev.question.data.User;
-import fr.gamedev.question.data.UserAnswer;
-import fr.gamedev.question.repository.AnswerRepository;
-import fr.gamedev.question.repository.QuestionRepository;
-import fr.gamedev.question.repository.UserAnswerRepository;
-import fr.gamedev.question.repository.UserRepository;
+import fr.gamedev.question.answer.Answer;
+import fr.gamedev.question.question.Question;
+import fr.gamedev.question.user.User;
+import fr.gamedev.question.useranswer.UserAnswer;
+import fr.gamedev.question.answer.AnswerRepository;
+import fr.gamedev.question.question.QuestionRepository;
+import fr.gamedev.question.useranswer.UserAnswerRepository;
+import fr.gamedev.question.user.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;

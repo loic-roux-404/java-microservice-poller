@@ -1,10 +1,11 @@
-package fr.gamedev.question.data;
+package fr.gamedev.question.tag;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
+import fr.gamedev.question.category.Category;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Parameter;
 
