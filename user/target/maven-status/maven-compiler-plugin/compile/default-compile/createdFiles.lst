@@ -1,0 +1,6 @@
+fr/gamedev/user/user/UserRepository.class
+fr/gamedev/user/user/UserConstants.class
+fr/gamedev/user/user/User.class
+fr/gamedev/user/user/UserService.class
+fr/gamedev/user/user/UserController.class
+fr/gamedev/user/UserLauncher.class
