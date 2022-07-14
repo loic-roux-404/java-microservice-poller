@@ -1,6 +1,7 @@
 package fr.gamedev.question.useranswer;
 
 import fr.gamedev.question.answer.Answer;
+import fr.gamedev.question.restcommons.IdentifiedEntity;
 import fr.gamedev.question.user.User;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Parameter;
@@ -14,7 +15,7 @@ import javax.persistence.ManyToOne;
  * UserAnswer class.
  */
 @Entity
-public class UserAnswer {
+public class UserAnswer implements IdentifiedEntity {
 
     /**
      * The id.

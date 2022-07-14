@@ -1,6 +1,7 @@
 package fr.gamedev.question.answer;
 
 import fr.gamedev.question.question.Question;
+import fr.gamedev.question.restcommons.IdentifiedEntity;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Parameter;
 
@@ -13,7 +14,7 @@ import javax.persistence.OneToOne;
  * @author RayaneKettana
  */
 @Entity
-public class Answer {
+public class Answer implements IdentifiedEntity {
 
   /**
    * The id.

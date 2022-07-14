@@ -6,6 +6,7 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
 import fr.gamedev.question.category.Category;
+import fr.gamedev.question.restcommons.IdentifiedEntity;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Parameter;
 
@@ -13,7 +14,7 @@ import org.hibernate.annotations.Parameter;
  * Tag class.
  */
 @Entity
-public class Tag {
+public class Tag implements IdentifiedEntity {
 
     /**
      * The id.

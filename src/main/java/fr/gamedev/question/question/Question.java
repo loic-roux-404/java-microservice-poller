@@ -1,5 +1,7 @@
 package fr.gamedev.question.question;
 
+import fr.gamedev.question.restcommons.IdentifiedEntity;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -8,7 +10,7 @@ import javax.persistence.Id;
  * Question class.
  */
 @Entity
-public class Question {
+public class Question implements IdentifiedEntity {
     /**
      * The id.
      */

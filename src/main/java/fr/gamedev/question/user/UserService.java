@@ -1,16 +1,14 @@
 package fr.gamedev.question.user;
 
+import fr.gamedev.question.restcommons.AbstractCrudService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Service;
 
-@Controller
-public class UserService {
-    private UserRepository userRepo;
-
-    public UserService(@Autowired UserRepository userRepo) {
-        this.userRepo = userRepo;
+@Service
+public class UserService extends AbstractCrudService<User> {
+    public UserService(
+            @Autowired UserRepository userDisplayRepo
+    ) {
+        super(userDisplayRepo, UserConstants.URI);
     }
-
-
-
 }

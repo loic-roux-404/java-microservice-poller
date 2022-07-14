@@ -1,5 +1,6 @@
 package fr.gamedev.question.user;
 
+import fr.gamedev.question.restcommons.IdentifiedEntity;
 import fr.gamedev.question.tag.Tag;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Parameter;
@@ -15,7 +16,7 @@ import javax.persistence.ManyToMany;
  * User class.
  */
 @Entity
-public class User {
+public class User implements IdentifiedEntity {
 
   /**
    * The id.
