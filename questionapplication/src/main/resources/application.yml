@@ -19,3 +19,4 @@ springdoc:
     swagger-ui:
         path: /api-docs
         operationsSorter: method
+    packages-to-exclude: com.example.multimodule.questionlib

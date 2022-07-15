@@ -14,7 +14,7 @@ import java.util.stream.StreamSupport;
 public abstract class AbstractCrudService<T extends IdentifiedEntity> {
     protected final PagingAndSortingRepository<T, Long> repo;
 
-    protected String uri;
+    protected final String uri;
 
     public AbstractCrudService(
             @Autowired PagingAndSortingRepository<T, Long> repo,
@@ -33,16 +33,16 @@ public abstract class AbstractCrudService<T extends IdentifiedEntity> {
         return repo.findById(id).orElseThrow(RuntimeException::new);
     }
 
-    public ResponseEntity<T> create(T client) throws URISyntaxException {
-        T savedClient = repo.save(client);
+    public ResponseEntity<T> create(T data) throws URISyntaxException {
+        T savedClient = repo.save(data);
         return ResponseEntity.created(
                 new URI(String.format("/%s/%s", uri, savedClient.getId()))
         ).body(savedClient);
     }
 
-    public ResponseEntity<T> update(Long id, @RequestBody T client) {
-        client.setId(id);
-        final T currentClient = repo.save(client);
+    public ResponseEntity<T> update(Long id, @RequestBody T data) {
+        data.setId(id);
+        final T currentClient = repo.save(data);
 
         return ResponseEntity.ok(currentClient);
     }

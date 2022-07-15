@@ -1,6 +1,5 @@
 package com.example.multimodule.service;
 
-
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -26,17 +25,17 @@ public abstract class AbstractCrudController<T extends IdentifiedEntity> {
     }
 
     @PostMapping
-    public ResponseEntity<T> createClient(@RequestBody T client) throws URISyntaxException {
-        return crudService.create(client);
+    public ResponseEntity<T> create(@RequestBody T data) throws URISyntaxException {
+        return crudService.create(data);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<T> updateClient(@PathVariable Long id, @RequestBody T client) {
-        return crudService.update(id, client);
+    public ResponseEntity<T> update(@PathVariable Long id, @RequestBody T data) {
+        return crudService.update(id, data);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<T> deleteClient(@PathVariable Long id) {
+    public ResponseEntity<T> delete(@PathVariable Long id) {
         return crudService.delete(id);
     }
 
