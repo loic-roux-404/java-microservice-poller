@@ -25,4 +25,13 @@ public class AnswerService extends AbstractCrudService<Answer> {
 
         return ResponseEntity.of(answerRepository.findByQuestion(questionFromId));
     }
+
+    public ResponseEntity<Boolean> isResponseIsCorrectForAnswer(long answer, boolean response) throws Exception {
+        final var a = answerRepository.findById(answer);
+
+        return a.map(e -> ResponseEntity.ok(
+                    e.getCorrectAnswer() == response)
+                )
+                .orElse(ResponseEntity.ok(false));
+    }
 }

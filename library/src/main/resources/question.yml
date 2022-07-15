@@ -10,7 +10,7 @@ paths:
     get:
       tags:
         - tag-controller
-      operationId: getClient
+      operationId: get
       parameters:
         - name: id
           in: path
@@ -28,7 +28,7 @@ paths:
     put:
       tags:
         - tag-controller
-      operationId: updateClient
+      operationId: update
       parameters:
         - name: id
           in: path
@@ -52,7 +52,7 @@ paths:
     delete:
       tags:
         - tag-controller
-      operationId: deleteClient
+      operationId: delete
       parameters:
         - name: id
           in: path
@@ -71,7 +71,7 @@ paths:
     get:
       tags:
         - question-controller
-      operationId: getClient_1
+      operationId: get_1
       parameters:
         - name: id
           in: path
@@ -89,7 +89,7 @@ paths:
     put:
       tags:
         - question-controller
-      operationId: updateClient_1
+      operationId: update_1
       parameters:
         - name: id
           in: path
@@ -113,7 +113,7 @@ paths:
     delete:
       tags:
         - question-controller
-      operationId: deleteClient_1
+      operationId: delete_1
       parameters:
         - name: id
           in: path
@@ -132,7 +132,7 @@ paths:
     get:
       tags:
         - category-controller
-      operationId: getClient_2
+      operationId: get_2
       parameters:
         - name: id
           in: path
@@ -150,7 +150,7 @@ paths:
     put:
       tags:
         - category-controller
-      operationId: updateClient_2
+      operationId: update_2
       parameters:
         - name: id
           in: path
@@ -174,7 +174,7 @@ paths:
     delete:
       tags:
         - category-controller
-      operationId: deleteClient_2
+      operationId: delete_2
       parameters:
         - name: id
           in: path
@@ -193,7 +193,7 @@ paths:
     get:
       tags:
         - answer-controller
-      operationId: getClient_3
+      operationId: get_3
       parameters:
         - name: id
           in: path
@@ -211,7 +211,7 @@ paths:
     put:
       tags:
         - answer-controller
-      operationId: updateClient_3
+      operationId: update_3
       parameters:
         - name: id
           in: path
@@ -235,7 +235,7 @@ paths:
     delete:
       tags:
         - answer-controller
-      operationId: deleteClient_3
+      operationId: delete_3
       parameters:
         - name: id
           in: path
@@ -254,7 +254,7 @@ paths:
     get:
       tags:
         - tag-controller
-      operationId: getClients
+      operationId: getAll
       responses:
         "200":
           description: OK
@@ -267,7 +267,7 @@ paths:
     post:
       tags:
         - tag-controller
-      operationId: createClient
+      operationId: create
       requestBody:
         content:
           application/json:
@@ -285,7 +285,7 @@ paths:
     get:
       tags:
         - question-controller
-      operationId: getClients_1
+      operationId: getAll_1
       responses:
         "200":
           description: OK
@@ -298,7 +298,7 @@ paths:
     post:
       tags:
         - question-controller
-      operationId: createClient_1
+      operationId: create_1
       requestBody:
         content:
           application/json:
@@ -316,7 +316,7 @@ paths:
     get:
       tags:
         - category-controller
-      operationId: getClients_2
+      operationId: getAll_2
       responses:
         "200":
           description: OK
@@ -329,7 +329,7 @@ paths:
     post:
       tags:
         - category-controller
-      operationId: createClient_2
+      operationId: create_2
       requestBody:
         content:
           application/json:
@@ -347,7 +347,7 @@ paths:
     get:
       tags:
         - answer-controller
-      operationId: getClients_3
+      operationId: getAll_3
       responses:
         "200":
           description: OK
@@ -360,13 +360,108 @@ paths:
     post:
       tags:
         - answer-controller
-      operationId: createClient_3
+      operationId: create_3
       requestBody:
         content:
           application/json:
             schema:
               $ref: '#/components/schemas/Answer'
         required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Answer'
+  /tag/exists/{id}:
+    get:
+      tags:
+        - tag-controller
+      operationId: exists
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: boolean
+  /question/exists/{id}:
+    get:
+      tags:
+        - question-controller
+      operationId: exists_1
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: boolean
+  /category/exists/{id}:
+    get:
+      tags:
+        - category-controller
+      operationId: exists_2
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: boolean
+  /answer/exists/{id}:
+    get:
+      tags:
+        - answer-controller
+      operationId: exists_3
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: boolean
+  /answer/by-question/{id}:
+    get:
+      tags:
+        - answer-controller
+      operationId: findByQuestion
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
       responses:
         "200":
           description: OK

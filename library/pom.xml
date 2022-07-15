@@ -80,6 +80,7 @@
 				<version>5.1.0</version>
 				<executions>
 					<execution>
+						<id>question</id>
 						<goals>
 							<goal>generate</goal>
 						</goals>
@@ -90,6 +91,27 @@
 							<generatorName>spring</generatorName>
 							<apiPackage>com.example.multimodule.questionlib.api</apiPackage>
 							<modelPackage>com.example.multimodule.questionlib.model</modelPackage>
+							<supportingFilesToGenerate>
+								ApiUtil.java
+							</supportingFilesToGenerate>
+							<configOptions>
+								<delegatePattern>true</delegatePattern>
+							</configOptions>
+						</configuration>
+					</execution>
+
+					<execution>
+						<id>user</id>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>
+							<inputSpec>
+								${project.basedir}/src/main/resources/user.yml
+							</inputSpec>
+							<generatorName>spring</generatorName>
+							<apiPackage>com.example.multimodule.userlib.api</apiPackage>
+							<modelPackage>com.example.multimodule.userlib.model</modelPackage>
 							<supportingFilesToGenerate>
 								ApiUtil.java
 							</supportingFilesToGenerate>

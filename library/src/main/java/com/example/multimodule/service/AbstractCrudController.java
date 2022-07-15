@@ -15,12 +15,12 @@ public abstract class AbstractCrudController<T extends IdentifiedEntity> {
     }
 
     @GetMapping
-    public List<T> getClients() {
+    public List<T> getAll() {
         return crudService.findAll();
     }
 
     @GetMapping("/{id}")
-    public T getClient(@PathVariable Long id) throws RuntimeException {
+    public T get(@PathVariable Long id) throws RuntimeException {
         return crudService.find(id);
     }
 
@@ -37,6 +37,11 @@ public abstract class AbstractCrudController<T extends IdentifiedEntity> {
     @DeleteMapping("/{id}")
     public ResponseEntity<T> delete(@PathVariable Long id) {
         return crudService.delete(id);
+    }
+
+    @GetMapping("/exists/{id}")
+    public ResponseEntity<Boolean> exists(@PathVariable Long id) {
+        return crudService.exists(id);
     }
 
 }

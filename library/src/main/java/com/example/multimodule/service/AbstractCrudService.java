@@ -51,4 +51,8 @@ public abstract class AbstractCrudService<T extends IdentifiedEntity> {
         repo.deleteById(id);
         return ResponseEntity.ok().build();
     }
+
+    public ResponseEntity<Boolean> exists(long id) {
+        return ResponseEntity.ok(repo.existsById(id));
+    }
 }
