@@ -10,7 +10,8 @@
 
     <modules>
         <module>library</module>
-        <module>application</module>
+        <module>questionapplication</module>
+        <module>userapplication</module>
     </modules>
 
 </project>

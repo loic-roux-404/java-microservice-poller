@@ -4,7 +4,80 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e57d05d5-b602-47c8-af87-ba62af84ff40" name="Changes" comment="" />
+    <list default="true" id="e57d05d5-b602-47c8-af87-ba62af84ff40" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/main/java/com/example/multimodule/application/question/answer/Answer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/main/java/com/example/multimodule/application/question/answer/AnswerConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/main/java/com/example/multimodule/application/question/answer/AnswerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/main/java/com/example/multimodule/application/question/answer/AnswerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/main/java/com/example/multimodule/application/question/answer/AnswerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/main/java/com/example/multimodule/application/question/category/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/main/java/com/example/multimodule/application/question/category/CategoryConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/main/java/com/example/multimodule/application/question/category/CategoryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/main/java/com/example/multimodule/application/question/category/CategoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/main/java/com/example/multimodule/application/question/category/CategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/main/java/com/example/multimodule/application/question/question/Question.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/main/java/com/example/multimodule/application/question/question/QuestionConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/main/java/com/example/multimodule/application/question/question/QuestionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/main/java/com/example/multimodule/application/question/question/QuestionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/main/java/com/example/multimodule/application/question/question/QuestionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/main/java/com/example/multimodule/application/question/tag/Tag.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/main/java/com/example/multimodule/application/question/tag/TagConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/main/java/com/example/multimodule/application/question/tag/TagController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/main/java/com/example/multimodule/application/question/tag/TagRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/main/java/com/example/multimodule/application/question/tag/TagService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library/src/main/java/com/example/multimodule/service/AbstractCrudController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library/src/main/java/com/example/multimodule/service/AbstractCrudService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library/src/main/java/com/example/multimodule/service/IdentifiedEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/userapplication/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/userapplication/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/userapplication/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/userapplication/src/main/java/com/example/multimodule/userapplication/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/userapplication/src/main/java/com/example/multimodule/userapplication/UserApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/userapplication/src/main/java/com/example/multimodule/userapplication/UserConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/userapplication/src/main/java/com/example/multimodule/userapplication/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/userapplication/src/main/java/com/example/multimodule/userapplication/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/userapplication/src/main/java/com/example/multimodule/userapplication/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/userapplication/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/userapplication/src/test/java/com/example/multimodule/userapplication/UserApplicationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/application/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/main/java/com/example/multimodule/application/DemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/com/example/multimodule/application/QuestionApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/test/java/com/example/multimodule/application/DemoApplicationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/test/java/com/example/multimodule/application/QuestionApplicationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-microservice-poller/core/src/main/java/fr/gamedev/core/restcommons/AbstractCrudController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-microservice-poller/core/src/main/java/fr/gamedev/core/restcommons/AbstractCrudService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-microservice-poller/core/src/main/java/fr/gamedev/core/restcommons/IdentifiedEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-microservice-poller/question/src/main/java/fr/gamedev/question/QuestionLauncher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-microservice-poller/question/src/main/java/fr/gamedev/question/answer/Answer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-microservice-poller/question/src/main/java/fr/gamedev/question/answer/AnswerConstants.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-microservice-poller/question/src/main/java/fr/gamedev/question/answer/AnswerController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-microservice-poller/question/src/main/java/fr/gamedev/question/answer/AnswerRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-microservice-poller/question/src/main/java/fr/gamedev/question/answer/AnswerService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-microservice-poller/question/src/main/java/fr/gamedev/question/category/Category.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-microservice-poller/question/src/main/java/fr/gamedev/question/category/CategoryConstants.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-microservice-poller/question/src/main/java/fr/gamedev/question/category/CategoryController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-microservice-poller/question/src/main/java/fr/gamedev/question/category/CategoryRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-microservice-poller/question/src/main/java/fr/gamedev/question/category/CategoryService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-microservice-poller/question/src/main/java/fr/gamedev/question/question/Question.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-microservice-poller/question/src/main/java/fr/gamedev/question/question/QuestionConstants.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-microservice-poller/question/src/main/java/fr/gamedev/question/question/QuestionController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-microservice-poller/question/src/main/java/fr/gamedev/question/question/QuestionRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-microservice-poller/question/src/main/java/fr/gamedev/question/question/QuestionService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-microservice-poller/question/src/main/java/fr/gamedev/question/tag/Tag.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-microservice-poller/question/src/main/java/fr/gamedev/question/tag/TagConstants.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-microservice-poller/question/src/main/java/fr/gamedev/question/tag/TagController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-microservice-poller/question/src/main/java/fr/gamedev/question/tag/TagRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-microservice-poller/question/src/main/java/fr/gamedev/question/tag/TagService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-microservice-poller/question/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-microservice-poller/user/src/main/java/fr/gamedev/user/user/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-microservice-poller/user/src/main/java/fr/gamedev/user/user/UserConstants.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-microservice-poller/user/src/main/java/fr/gamedev/user/user/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-microservice-poller/user/src/main/java/fr/gamedev/user/user/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-microservice-poller/user/src/main/java/fr/gamedev/user/user/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/library/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -66,6 +139,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="h2" />
     <property name="GitStage.ChangesTree.GroupingKeys" value="directory&#10;module&#10;repository" />
@@ -79,7 +153,7 @@
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="jdk.selected.JAVA_MODULE" value="openjdk-17" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/gs-multi-module/complete" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -93,20 +167,23 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/gs-multi-module/complete" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/questionapplication" />
+      <recent name="$PROJECT_DIR$/userapplication/src/main/resources" />
+      <recent name="$PROJECT_DIR$/gs-multi-module/complete" />
       <recent name="$PROJECT_DIR$/src/main/java/fr/gamedev/question/useranswer" />
-      <recent name="$PROJECT_DIR$/src/main/java/fr/gamedev/question/answer" />
-      <recent name="$PROJECT_DIR$/src/main/java/fr/gamedev/question/category" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/gs-multi-module/complete/core" />
-      <recent name="$PROJECT_DIR$/core" />
-      <recent name="$PROJECT_DIR$/question/src/main/java/fr/gamedev/service" />
-      <recent name="$PROJECT_DIR$/src/service/src" />
+      <recent name="$PROJECT_DIR$/leaderboardapplication/src/main/java/com/example/multimodule/leaderboardapplication" />
+      <recent name="$PROJECT_DIR$/library/src/main/java/com/example/multimodule/service" />
+      <recent name="$PROJECT_DIR$/application/src/main/resources" />
+      <recent name="$PROJECT_DIR$/userapplication/src/main/java/com/example/multimodule/application" />
+      <recent name="$PROJECT_DIR$/application/src/main/java/com/example/multimodule/application" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.multimodule.application" />
+      <recent name="com.example.multimodule.userapplication" />
+      <recent name="com.example.multimodule.service" />
       <recent name="fr.gamedev.core" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -122,8 +199,8 @@
       <command value="mvn compile dependency:tree" />
       <command value="mvn clean package spring-boot:repackage " />
       <command value="mvn clean package spring-boot:repackage" />
-      <command value="mvn clean install" />
       <command value="mvn install" />
+      <command value="mvn clean install" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -133,7 +210,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ServiceLauncher">
+  <component name="RunManager" selected="Spring Boot.QuestionApplication">
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -145,62 +222,52 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="multi-module-application-complete" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.multimodule.application.DemoApplication" />
+    <configuration name="LeaderboardApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="multi-module-leaderboardapplication-complete" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.multimodule.leaderboardapplication.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.multimodule.leaderboardapplication.LeaderboardApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LeaderboardLauncher" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="service (1)" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="fr.gamedev.leaderboard.LeaderboardLauncher" />
+    <configuration name="QuestionApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="multi-module-applicationquestion-complete" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.multimodule.questionapplication.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.multimodule.questionapplication.QuestionApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServiceLauncher (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="service (2)" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="fr.gamedev.service.LeaderboardLauncher" />
+    <configuration name="UserApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="multi-module-userapplication-complete" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.multimodule.userapplication.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.multimodule.userapplication.UserApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServiceLauncher (2)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="user" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="fr.gamedev.service.ServiceLauncher" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ServiceLauncher (3)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="service (2)" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="fr.gamedev.service.LeaderboardLauncher" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ServiceLauncher (4)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="service (2)" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="fr.gamedev.service.LeaderboardLauncher" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ServiceLauncher" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="service (2)" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="fr.gamedev.service.LeaderboardLauncher" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserLauncher" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="user" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="fr.gamedev.user.UserLauncher" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.QuestionApplication" />
+        <item itemvalue="Spring Boot.LeaderboardApplication" />
+        <item itemvalue="Spring Boot.UserApplication" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -248,6 +315,10 @@
       <workItem from="1657840962083" duration="1137000" />
       <workItem from="1657870798149" duration="1143000" />
       <workItem from="1657872014098" duration="179000" />
+      <workItem from="1657872208821" duration="1479000" />
+      <workItem from="1657873708859" duration="835000" />
+      <workItem from="1657874995737" duration="343000" />
+      <workItem from="1657875356814" duration="5399000" />
     </task>
     <servers />
   </component>
@@ -366,6 +437,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
