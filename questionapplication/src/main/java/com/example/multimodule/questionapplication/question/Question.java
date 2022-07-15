@@ -18,7 +18,7 @@ public class Question implements IdentifiedEntity {
     @Id
     private long id;
     /**
-     * The contenet.
+     * The content.
      */
     private String content;
 

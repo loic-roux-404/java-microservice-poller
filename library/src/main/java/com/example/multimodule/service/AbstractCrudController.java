@@ -9,7 +9,7 @@ import java.util.List;
 
 public abstract class AbstractCrudController<T extends IdentifiedEntity> {
 
-    private final AbstractCrudService<T> crudService;
+    protected final AbstractCrudService<T> crudService;
 
     public AbstractCrudController(AbstractCrudService<T> crudService) {
         this.crudService = crudService;
