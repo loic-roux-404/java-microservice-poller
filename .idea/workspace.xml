@@ -114,11 +114,11 @@
       <recent name="$PROJECT_DIR$/src/main/java/fr/gamedev/question/useranswer" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/library/src/main/resources" />
+      <recent name="$PROJECT_DIR$/library" />
+      <recent name="$PROJECT_DIR$/openapis" />
       <recent name="$PROJECT_DIR$/leaderboardapplication/src/main/java/com/example/multimodule/leaderboardapplication" />
       <recent name="$PROJECT_DIR$/library/src/main/java/com/example/multimodule/service" />
-      <recent name="$PROJECT_DIR$/application/src/main/resources" />
-      <recent name="$PROJECT_DIR$/userapplication/src/main/java/com/example/multimodule/application" />
-      <recent name="$PROJECT_DIR$/application/src/main/java/com/example/multimodule/application" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.example.multimodule.application" />
@@ -150,7 +150,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.QuestionApplication (1)">
+  <component name="RunManager" selected="Spring Boot.QuestionApplication">
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -175,21 +175,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="QuestionApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="multi-module-questionapplication-complete" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.multimodule.questionapplication.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.multimodule.questionapplication.QuestionApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="QuestionApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="multi-module-applicationquestion-complete" />
+      <module name="multi-module-questionapplication-complete" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.multimodule.questionapplication.*" />
@@ -214,9 +201,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="SwaggerCodegen">
+      <option name="activeConfigurationType" value="FILE" />
+      <option name="configurationPath" value="" />
+      <option name="customJreEnabled" value="false" />
+      <option name="customTemplatesPath" value="" />
+      <option name="enableDebugLogging" value="false" />
+      <option name="generateToPath" value="$PROJECT_DIR$/gen" />
+      <option name="generationParameters">
+        <list />
+      </option>
+      <option name="generatorPath" value="https://repo1.maven.org/maven2/org/openapitools/openapi-generator-cli/5.0.0/openapi-generator-cli-5.0.0.jar" />
+      <option name="jdkPath" value="" />
+      <option name="language" value="java" />
+      <option name="specificationPath" value="$PROJECT_DIR$/openapis/dep-question-api.yml" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.QuestionApplication (1)" />
         <item itemvalue="Spring Boot.QuestionApplication" />
         <item itemvalue="Spring Boot.LeaderboardApplication" />
         <item itemvalue="Spring Boot.UserApplication" />
@@ -275,7 +277,7 @@
       <workItem from="1657875356814" duration="9318000" />
       <workItem from="1657885784567" duration="2104000" />
       <workItem from="1657891486471" duration="643000" />
-      <workItem from="1657892147138" duration="697000" />
+      <workItem from="1657892147138" duration="4117000" />
     </task>
     <servers />
   </component>
@@ -397,6 +399,17 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/questionapplication/src/main/java/com/example/multimodule/questionapplication/QuestionApplication.java</url>
+          <line>6</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
