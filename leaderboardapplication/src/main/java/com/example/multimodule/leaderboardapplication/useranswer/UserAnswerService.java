@@ -2,6 +2,7 @@ package com.example.multimodule.leaderboardapplication.useranswer;
 
 import com.example.multimodule.questionlib.api.AnswerApiDelegate;
 import com.example.multimodule.questionlib.api.QuestionApiDelegate;
+import com.example.multimodule.questionlib.model.Answer;
 import com.example.multimodule.service.AbstractCrudService;
 import com.example.multimodule.userlib.api.UsersApi;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Service;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Objects;
+import java.util.stream.Collectors;
 
 @Service
 public class UserAnswerService extends AbstractCrudService<UserAnswer> {
@@ -61,10 +63,8 @@ public class UserAnswerService extends AbstractCrudService<UserAnswer> {
         if (!userRes.hasBody() && Boolean.FALSE.equals(userRes.getBody())) return response;
 
         List<UserAnswer> anwsered = getAlreadyAnsweredCorrect(userId, questionFetchedId);
-        System.out.println(anwsered);
+
         userAnswer.setUser(userId);
-
-
         userAnswer.setAnswer(expectedAnswer.getId());
 
         userAnswer.setPoints(expectedAnswer.getCorrectAnswer() == answer
@@ -77,13 +77,21 @@ public class UserAnswerService extends AbstractCrudService<UserAnswer> {
         return responseFromPoints((int) userAnswer.getPoints());
     }
 
-    public List<UserAnswer> getAlreadyAnsweredCorrect(long user, long answer) {
-        // TODO SELECT ua FROM UserAnswer ua WHERE ua.user = ?1 and ua.answer.question = ?2 and ua.points > 0
+    public List<UserAnswer> getAlreadyAnsweredCorrect(long user, long question) {
         final var userAnwsers = userAnswerRepository.findByUserCorrect(user);
 
-        final var answerObj = answerApi.findByQuestion(answer).getBody();
+        final var answers = answerApi.findAllByQuestion(question).getBody();
 
-        return List.of();
+        if (answers == null) return userAnwsers;
+
+        return userAnwsers.stream()
+                .filter(Objects::nonNull)
+                .filter(e -> answers.stream()
+                        .map(Answer::getId)
+                        .collect(Collectors.toList())
+                        .contains(e.getAnswer())
+                )
+                .collect(Collectors.toList());
     }
 
     /**

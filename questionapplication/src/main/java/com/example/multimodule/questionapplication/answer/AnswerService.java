@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 
+import java.util.List;
+
 @Controller
 public class AnswerService extends AbstractCrudService<Answer> {
     protected final AnswerRepository answerRepository;
@@ -20,10 +22,10 @@ public class AnswerService extends AbstractCrudService<Answer> {
         this.questionRepository = questionRepository;
     }
 
-    public ResponseEntity<Answer> findByQuestion(long questionId) {
+    public ResponseEntity<List<Answer>> findAllByQuestion(long questionId) {
         final var questionFromId = questionRepository.findById(questionId).orElseThrow();
 
-        return ResponseEntity.of(answerRepository.findByQuestion(questionFromId));
+        return ResponseEntity.ok(answerRepository.findAllByQuestion(questionFromId));
     }
 
     public ResponseEntity<Boolean> isResponseIsCorrectForAnswer(long answer, boolean response) throws Exception {

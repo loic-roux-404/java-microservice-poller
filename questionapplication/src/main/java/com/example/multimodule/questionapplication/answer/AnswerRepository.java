@@ -1,5 +1,6 @@
 package com.example.multimodule.questionapplication.answer;
 
+import java.util.List;
 import java.util.Optional;
 
 import com.example.multimodule.questionapplication.question.Question;
@@ -17,5 +18,5 @@ public interface AnswerRepository extends PagingAndSortingRepository<Answer, Lon
    * @param question The question
    * @return (Optional)
    */
-  Optional<Answer> findByQuestion(Question question);
+  List<Answer> findAllByQuestion(Question question);
 }

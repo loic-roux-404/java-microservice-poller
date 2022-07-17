@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @RequestMapping(AnswerConstants.SLASHED_URI)
 public class AnswerController extends AbstractCrudController<Answer> {
@@ -20,7 +22,7 @@ public class AnswerController extends AbstractCrudController<Answer> {
     }
 
     @GetMapping("/by-question/{id}")
-    public ResponseEntity<Answer> findByQuestion(@PathVariable long id) {
-        return answerService.findByQuestion(id);
+    public ResponseEntity<List<Answer>> findAllByQuestion(@PathVariable long id) {
+        return answerService.findAllByQuestion(id);
     }
 }
