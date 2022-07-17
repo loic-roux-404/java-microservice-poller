@@ -12,16 +12,16 @@ import javax.persistence.Id;
  * UserAnswer class.
  */
 @Entity
-public class UserQuestion implements IdentifiedEntity {
+public class UserChoice implements IdentifiedEntity {
 
     /**
      * The id.
      */
-    @GeneratedValue(generator = "seq_gen_userQuestion")
-    @GenericGenerator(name = "seq_gen_userQuestion",
+    @GeneratedValue(generator = "seq_gen_userChoice")
+    @GenericGenerator(name = "seq_gen_userChoice",
             strategy = "org.hibernate.id.enhanced.SequenceStyleGenerator",
             parameters = {
-                    @Parameter(name = "sequence_name", value = "seq_answerQuestion"),
+                    @Parameter(name = "sequence_name", value = "seq_answerChoice"),
                     @Parameter(name = "initial_value", value = "0"),
                     @Parameter(name = "increment_size", value = "1")
             }
@@ -39,14 +39,11 @@ public class UserQuestion implements IdentifiedEntity {
     private long question;
 
     /**
+     * TODO: create a leader board table instead
      * The points.
      */
     private long currentPoints;
 
-    /**
-     * tries
-     */
-    private long tries;
     /**
      * @return the id
      */
@@ -89,15 +86,6 @@ public class UserQuestion implements IdentifiedEntity {
         this.currentPoints = newPoints;
     }
 
-
-    public long getTries() {
-        return tries;
-    }
-
-    public void setTries(long tries) {
-        this.tries = tries;
-    }
-
     /**
      * @return the answer
      */
@@ -111,5 +99,4 @@ public class UserQuestion implements IdentifiedEntity {
     public void setQuestion(final long newAnswer) {
         this.question = newAnswer;
     }
-
 }

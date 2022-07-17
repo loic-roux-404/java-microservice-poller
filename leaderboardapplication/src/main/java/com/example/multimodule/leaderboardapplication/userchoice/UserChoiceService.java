@@ -14,8 +14,8 @@ import java.util.List;
 import java.util.Objects;
 
 @Service
-public class UserQuestionService extends AbstractCrudService<UserQuestion> {
-    private final UserQuestionRepository userQuestionRepository;
+public class UserChoiceService extends AbstractCrudService<UserChoice> {
+    private final UserChoiceRepository userChoiceRepository;
 
     private final QuestionControllerApi questionApi;
 
@@ -23,16 +23,16 @@ public class UserQuestionService extends AbstractCrudService<UserQuestion> {
 
     private final AnswerControllerApi answerApi;
 
-    Logger logger = LoggerFactory.getLogger(UserQuestionService.class);
+    Logger logger = LoggerFactory.getLogger(UserChoiceService.class);
 
-    public UserQuestionService(
-            @Autowired UserQuestionRepository userDisplayRepo,
+    public UserChoiceService(
+            @Autowired UserChoiceRepository userDisplayRepo,
             @Autowired QuestionControllerApi questionApi,
             @Autowired AnswerControllerApi answerApi,
             @Autowired UserControllerApi usersApi
     ) {
         super(userDisplayRepo, UserChoiceConstants.URI);
-        this.userQuestionRepository = userDisplayRepo;
+        this.userChoiceRepository = userDisplayRepo;
         this.questionApi = questionApi;
         this.usersApi = usersApi;
         this.answerApi = answerApi;
@@ -56,26 +56,22 @@ public class UserQuestionService extends AbstractCrudService<UserQuestion> {
 
         if (Objects.requireNonNull(question).getId() != questionId) return response;
 
-        UserQuestion userQuestion = new UserQuestion();
+        UserChoice userChoice = new UserChoice();
 
-        List<UserQuestion> answered = findAllUserChoicesForQuestion(userId, question.getId());
+        List<UserChoice> answered = userChoiceRepository
+                .findAllUserChoicesForQuestion(userId, question.getId());
 
-        userQuestion.setUser(userId);
-        userQuestion.setQuestion(question.getId());
-        userQuestion.setTries(userQuestion.getTries() + 1);
+        userChoice.setUser(userId);
+        userChoice.setQuestion(question.getId());
 
-        userQuestion.setCurrentPoints(answerApi.findByQuestion(question.getId()).isCorrectAnswer() == choice
+        userChoice.setCurrentPoints(answerApi.findByQuestion(question.getId()).isCorrectAnswer() == choice
                 ? 5 - answered.size()
                 : 0
         );
 
-        userQuestionRepository.save(userQuestion);
+        userChoiceRepository.save(userChoice);
 
-        return responseFromPoints((int) userQuestion.getCurrentPoints());
-    }
-
-    protected List<UserQuestion> findAllUserChoicesForQuestion(long user, long question) {
-        return userQuestionRepository.findAllUserChoicesForQuestion(user, question);
+        return responseFromPoints((int) userChoice.getCurrentPoints());
     }
 
     /**

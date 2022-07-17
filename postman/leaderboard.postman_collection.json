@@ -1,0 +1,519 @@
+{
+	"info": {
+		"_postman_id": "b5fedce7-2545-4d38-930b-0f9f27ea094a",
+		"name": "leaderboard",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user-answer",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "get",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/user-answer/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"user-answer",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "39844547",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/user-answer/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"user-answer",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "39844547",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 60276280,\n  \"user\": 91074907,\n  \"answer\": -28629029,\n  \"points\": -54336690\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/user-answer/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"user-answer",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "39844547",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": 60276280,\n  \"user\": 91074907,\n  \"answer\": -28629029,\n  \"points\": -54336690\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/user-answer/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"user-answer",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "39844547",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/user-answer/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"user-answer",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "39844547",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/user-answer/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"user-answer",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "39844547",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "get All",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/user-answer",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"user-answer"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/user-answer",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"user-answer"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 60276280,\n  \"user\": 91074907,\n  \"answer\": -28629029,\n  \"points\": -54336690\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/user-answer",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"user-answer"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 60276280,\n  \"user\": 91074907,\n  \"answer\": -28629029,\n  \"points\": -54336690\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/user-answer",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"user-answer"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "exists",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/user-answer/exists/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"user-answer",
+								"exists",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "39844547",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/user-answer/exists/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"user-answer",
+										"exists",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "39844547",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "do Answer To Question",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/user-answer/do-answer-to-question?questionId=0&answer=false&userId=0",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"user-answer",
+								"do-answer-to-question"
+							],
+							"query": [
+								{
+									"key": "questionId",
+									"value": "0",
+									"description": "(Required) "
+								},
+								{
+									"key": "answer",
+									"value": "false",
+									"description": "(Required) "
+								},
+								{
+									"key": "userId",
+									"value": "0",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/user-answer/do-answer-to-question?questionId=39844547&answer=false&userId=39844547",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"user-answer",
+										"do-answer-to-question"
+									],
+									"query": [
+										{
+											"key": "questionId",
+											"value": "39844547"
+										},
+										{
+											"key": "answer",
+											"value": "false"
+										},
+										{
+											"key": "userId",
+											"value": "39844547"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "in"
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8082",
+			"type": "string"
+		}
+	]
+}

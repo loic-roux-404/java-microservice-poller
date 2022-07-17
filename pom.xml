@@ -12,6 +12,7 @@
         <module>library</module>
         <module>questionapplication</module>
         <module>userapplication</module>
+        <module>leaderboardapplication</module>
     </modules>
 
     <properties>
