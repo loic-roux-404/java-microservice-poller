@@ -1,6 +1,6 @@
 package com.example.multimodule.questionapplication.category;
 
-import com.example.multimodule.service.AbstractCrudService;
+import com.example.multimodule.library.AbstractCrudService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 

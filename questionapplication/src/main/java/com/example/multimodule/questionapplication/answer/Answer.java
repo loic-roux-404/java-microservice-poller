@@ -1,14 +1,11 @@
 package com.example.multimodule.questionapplication.answer;
 
 import com.example.multimodule.questionapplication.question.Question;
-import com.example.multimodule.service.IdentifiedEntity;
+import com.example.multimodule.library.IdentifiedEntity;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Parameter;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 
 /**
  * @author RayaneKettana
@@ -34,7 +31,7 @@ public class Answer implements IdentifiedEntity {
   /**
    * The question.
    */
-  @OneToOne
+  @OneToOne(cascade = {CascadeType.ALL})
   private Question question;
   /**
    * Is answer correct.

@@ -1,6 +1,6 @@
 package com.example.multimodule.userapplication;
 
-import com.example.multimodule.service.IdentifiedEntity;
+import com.example.multimodule.library.IdentifiedEntity;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Parameter;
 

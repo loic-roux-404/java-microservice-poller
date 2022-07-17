@@ -1,4 +1,4 @@
-package com.example.multimodule.service;
+package com.example.multimodule.library;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 

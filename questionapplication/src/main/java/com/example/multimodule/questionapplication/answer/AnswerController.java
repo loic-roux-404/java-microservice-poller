@@ -1,14 +1,9 @@
 package com.example.multimodule.questionapplication.answer;
 
-import com.example.multimodule.service.AbstractCrudController;
+import com.example.multimodule.library.AbstractCrudController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(AnswerConstants.SLASHED_URI)
@@ -21,8 +16,8 @@ public class AnswerController extends AbstractCrudController<Answer> {
         this.answerService = crudService;
     }
 
-    @GetMapping("/by-question/{id}")
-    public ResponseEntity<List<Answer>> findAllByQuestion(@PathVariable long id) {
-        return answerService.findAllByQuestion(id);
+    @GetMapping("/find-by-question/{id}")
+    public ResponseEntity<Answer> findByQuestion(@PathVariable long id) {
+        return answerService.findByQuestion(id);
     }
 }

@@ -1,12 +1,9 @@
 package com.example.multimodule.questionapplication.tag;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 import com.example.multimodule.questionapplication.category.Category;
-import com.example.multimodule.service.IdentifiedEntity;
+import com.example.multimodule.library.IdentifiedEntity;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Parameter;
 
@@ -33,7 +30,7 @@ public class Tag implements IdentifiedEntity {
     /**
      * Category associated.
      */
-    @ManyToOne
+    @ManyToOne(cascade = {CascadeType.ALL})
     private Category category;
 
     /**

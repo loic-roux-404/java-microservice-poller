@@ -1,4 +1,4 @@
-package com.example.multimodule.service;
+package com.example.multimodule.library;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.PagingAndSortingRepository;
@@ -47,9 +47,9 @@ public abstract class AbstractCrudService<T extends IdentifiedEntity> {
         return ResponseEntity.ok(currentClient);
     }
 
-    public ResponseEntity<T> delete(Long id) {
+    public ResponseEntity<Boolean> delete(Long id) {
         repo.deleteById(id);
-        return ResponseEntity.ok().build();
+        return ResponseEntity.ok(true);
     }
 
     public ResponseEntity<Boolean> exists(long id) {

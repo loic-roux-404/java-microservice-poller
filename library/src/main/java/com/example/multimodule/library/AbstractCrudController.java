@@ -1,4 +1,4 @@
-package com.example.multimodule.service;
+package com.example.multimodule.library;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -15,12 +15,12 @@ public abstract class AbstractCrudController<T extends IdentifiedEntity> {
     }
 
     @GetMapping
-    public List<T> getAll() {
+    public List<T> findAll() {
         return crudService.findAll();
     }
 
     @GetMapping("/{id}")
-    public T get(@PathVariable Long id) throws RuntimeException {
+    public T find(@PathVariable Long id) throws RuntimeException {
         return crudService.find(id);
     }
 
@@ -35,7 +35,7 @@ public abstract class AbstractCrudController<T extends IdentifiedEntity> {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<T> delete(@PathVariable Long id) {
+    public ResponseEntity<Boolean> delete(@PathVariable Long id) {
         return crudService.delete(id);
     }
 

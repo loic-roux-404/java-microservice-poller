@@ -1,6 +1,6 @@
-package com.example.multimodule.leaderboardapplication.useranswer;
+package com.example.multimodule.leaderboardapplication.userchoice;
 
-import com.example.multimodule.service.IdentifiedEntity;
+import com.example.multimodule.library.IdentifiedEntity;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Parameter;
 
@@ -12,16 +12,16 @@ import javax.persistence.Id;
  * UserAnswer class.
  */
 @Entity
-public class UserAnswer implements IdentifiedEntity {
+public class UserQuestion implements IdentifiedEntity {
 
     /**
      * The id.
      */
-    @GeneratedValue(generator = "seq_gen_userAnswer")
-    @GenericGenerator(name = "seq_gen_userAnswer",
+    @GeneratedValue(generator = "seq_gen_userQuestion")
+    @GenericGenerator(name = "seq_gen_userQuestion",
             strategy = "org.hibernate.id.enhanced.SequenceStyleGenerator",
             parameters = {
-                    @Parameter(name = "sequence_name", value = "seq_answerUser"),
+                    @Parameter(name = "sequence_name", value = "seq_answerQuestion"),
                     @Parameter(name = "initial_value", value = "0"),
                     @Parameter(name = "increment_size", value = "1")
             }
@@ -34,14 +34,19 @@ public class UserAnswer implements IdentifiedEntity {
      */
     private long user;
     /**
-     * The anwser.
+     * The question user answered to.
      */
-    private long answer;
+    private long question;
+
     /**
      * The points.
      */
-    private long points;
+    private long currentPoints;
 
+    /**
+     * tries
+     */
+    private long tries;
     /**
      * @return the id
      */
@@ -73,29 +78,38 @@ public class UserAnswer implements IdentifiedEntity {
     /**
      * @return the points
      */
-    public long getPoints() {
-        return points;
+    public long getCurrentPoints() {
+        return currentPoints;
     }
 
     /**
      * @param newPoints the points to set
      */
-    public void setPoints(final long newPoints) {
-        this.points = newPoints;
+    public void setCurrentPoints(final long newPoints) {
+        this.currentPoints = newPoints;
+    }
+
+
+    public long getTries() {
+        return tries;
+    }
+
+    public void setTries(long tries) {
+        this.tries = tries;
     }
 
     /**
      * @return the answer
      */
-    public long getAnswer() {
-        return answer;
+    public long getQuestion() {
+        return question;
     }
 
     /**
      * @param newAnswer the answer to set
      */
-    public void setAnswer(final long newAnswer) {
-        this.answer = newAnswer;
+    public void setQuestion(final long newAnswer) {
+        this.question = newAnswer;
     }
 
 }

@@ -1,15 +1,16 @@
-package com.example.multimodule.leaderboardapplication.useranswer;
+package com.example.multimodule.leaderboardapplication.userchoice;
 
-import com.example.multimodule.service.AbstractCrudController;
+import com.example.multimodule.library.AbstractCrudController;
+import com.example.multimodule.userlib.ApiException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+@RequestMapping(UserChoiceConstants.SLASHED_URI)
 @RestController
-@RequestMapping(UserAnswerConstants.SLASHED_URI)
-public class UserAnwserController extends AbstractCrudController<UserAnswer> {
-    UserAnswerService service;
+public class UserQuestionController extends AbstractCrudController<UserQuestion> {
+    private final UserQuestionService service;
 
-    public UserAnwserController(@Autowired UserAnswerService service) {
+    public UserQuestionController(@Autowired UserQuestionService service) {
         super(service);
         this.service = service;
     }
@@ -19,7 +20,7 @@ public class UserAnwserController extends AbstractCrudController<UserAnswer> {
             @RequestParam final long questionId,
             @RequestParam final Boolean answer,
             @RequestParam final long userId
-    ) {
+    ) throws Exception {
         return this.service.doAnswerToQuestion(questionId, answer, userId);
     }
 }
