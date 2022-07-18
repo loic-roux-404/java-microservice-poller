@@ -3,6 +3,10 @@
 - Rayanne Kettana
 - ROUX Loïc
 
+## Schema
+
+![archi](./doc/ms-architecture.png)
+
 ## Installation / Rebuild
 
 - Requis : openjdk17 or any Java11 langage level jdk
