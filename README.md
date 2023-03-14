@@ -2,6 +2,7 @@
 
 - Rayanne Kettana
 - ROUX Loïc
+- Giamatteo Enzo
 
 ## Schema
 
